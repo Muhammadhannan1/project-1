@@ -9,7 +9,8 @@ class Relations extends Model
 {
     use HasFactory;
     protected $fillable = [
-
+        'careTakerId',
+        'patientId',
         'relationName',
         'otp',
         'status',

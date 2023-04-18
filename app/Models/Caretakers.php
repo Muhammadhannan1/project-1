@@ -9,7 +9,7 @@ class Caretakers extends Model
 {
     use HasFactory;
     protected $fillable = [
-
+        'userId'
     ];
 
 }
