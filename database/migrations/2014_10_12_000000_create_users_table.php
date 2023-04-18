@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('image');
             $table->integer('cnic');
             $table->string('status');
-            $table->string('role');
-            $table->integer('forgotCode');
+            $table->string('role')->default('user');;
+            $table->integer('forgotCode')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

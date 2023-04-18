@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('relations', function (Blueprint $table) {
             $table->id();
-            // $table->unsignedBigInteger('careTakerId')->nullable();
-            // $table->foreign('careTakerId')->references('userId')->on('caretakers');
-            // $table->unsignedBigInteger('patientId')->nullable();
-            // $table->foreign('patientId')->references('userId')->on('patients');
+            $table->unsignedBigInteger('careTakerId');
+            $table->foreign('careTakerId')->references('userId')->on('caretakers');
+            $table->unsignedBigInteger('patientId');
+            $table->foreign('patientId')->references('userId')->on('patients');
             $table->string('relationName');
             $table->integer('otp');
             $table->string('status');
