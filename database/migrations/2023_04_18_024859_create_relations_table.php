@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('patientId')->references('userId')->on('patients');
             $table->string('relationName');
             $table->integer('otp');
-            $table->string('status');
+            $table->string('status')->default('pending');
             $table->string('careTakerName');
             $table->timestamps();
         });

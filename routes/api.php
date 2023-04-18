@@ -27,7 +27,7 @@ Route::post('user/login','App\Http\Controllers\UserController@login');
 // Route::post('user/login','App\Http\Controllers\UserController@login');
 
 Route::prefix('admin')->middleware(['auth:api','isAdmin'])->group(function(){
-//
+    Route::post('vendor/register','App\Http\Controllers\VendorController@store');
 });
 
 Route::middleware(['auth:api'])->group(function(){

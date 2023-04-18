@@ -64,7 +64,7 @@ class NotificationController extends Controller
             }
             if ($notification!=null) {
                 return response()->json(
-                    ['message'=>'User registered Successfully'],200
+                    ['message'=>'Notification successfull'],200
 
                 );
             }
